@@ -485,34 +485,21 @@ main {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+  transform: rotate(120deg);
 }
 .modal {
   background-color: var(--text-color);
-  width: 528px;
-  height: 581px;
   position: absolute;
   opacity: 1;
   box-shadow: 0px 1px 3px #0000001f, 0px 1px 1px #00000024,
     0px 2px 1px #00000033;
   border-radius: 4px;
-  top: 221px;
-  left: 536px;
-  transform: scale(0.9);
-  transition-duration: 250ms;
-  transition: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.close-button {
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 0;
-}
-.modal .close-button {
-  position: relative;
-  top: 8px;
-  left: 240px;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  transform: translate(-50%, -50%);
+  min-height: 581px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .image-text {
   font-size: 17px;
@@ -549,12 +536,29 @@ nav ul li.current-site::after {
   border-radius: 2px;
 }
 .backdrop {
-  position: absolute;
-  opacity: 1;
-  margin: 0;
-  background: #00000033;
-  height: 100%;
-  width: 100%;
-  top: 0;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
   left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  transform: scale(1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.submit-button {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--text-color);
+  background-color: var(--niebo-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 10px 76px;
 }
