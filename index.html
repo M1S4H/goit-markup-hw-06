@@ -365,6 +365,27 @@
                 </svg>
               </li>
             </ul>
+            <div class="footer-newsletter">
+              <form>
+                <label for="newsletter" class="footer-inscription"
+                  ><p>Zapisz się do newslettera</p></label
+                >
+                <div class="input-send">
+                  <input
+                    id="newsletter"
+                    type="email"
+                    placeholder="E-mail"
+                    class="newsletter-input form-input"
+                  />
+                  <button type="submit" class="button-main-page">
+                    Zapisz się
+                    <svg width="24px" height="24" class="icon-newsletter">
+                      <use href="./images/icons.svg#icon-send"></use>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </address>
       </div>
@@ -373,8 +394,8 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close="">
-          <svg width="18" height="18">
-            <use href="./images/modal-icon.svg#icon-modal-icon"></use>
+          <svg class="btn-close" width="18" height="18">
+            <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
         <form>
@@ -382,39 +403,37 @@
             Zostaw swoje dane w formularzu poniżej
           </legend>
 
-          <div class="input-svg">
-            <label>
-              Imie
-              <div class="label-part">
-                <input type="text" name="name" required />
-                <svg class="svg-form" width="18" height="18">
-                  <use href="./images/icons.svg#icon-person-black-1"></use>
-                </svg>
-              </div>
-            </label>
+          <label class="label-list">
+            Imie
+            <div class="label-part">
+              <input type="text" name="name" required />
+              <svg class="svg-form" width="18" height="18">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </label>
 
-            <label>
-              Telefon
-              <div class="label-part">
-                <input type="tel" name="phone" required />
-                <svg class="svg-form" width="18" height="18">
-                  <use href="./images/icons.svg#icon-person-black-2"></use>
-                </svg>
-              </div>
-            </label>
+          <label class="label-list">
+            Telefon
+            <div class="label-part">
+              <input type="tel" name="phone" required />
+              <svg class="svg-form" width="18" height="18">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </label>
 
-            <label>
-              Email
-              <div class="label-part">
-                <input type="email" name="email" required />
-                <svg class="svg-form" width="18" height="18">
-                  <use href="./images/icons.svg#icon-email-black-1"></use>
-                </svg>
-              </div>
-            </label>
-          </div>
+          <label class="label-list">
+            Email
+            <div class="label-part">
+              <input type="email" name="email" required />
+              <svg class="svg-form" width="18" height="18">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </label>
 
-          <label>
+          <label class="label-comment">
             Komentarz
             <textarea
               class="placeholder"
@@ -422,17 +441,15 @@
               placeholder="Wprowadź tekst"
             ></textarea>
           </label>
-          <label class="acceptance-label">
+          <label class="policy">
             <input
-              class="checkbox-hidden"
+              class="checkbox"
               type="checkbox"
-              name="acceptance"
+              name="acceptacion"
+              hidden
               required
             />
-            <svg class="checkbox-icon-unchecked" width="16" height="15">
-              <use href="./images/icons.svg#icon-checkbox"></use>
-            </svg>
-            <svg class="checkbox-icon" width="16" height="15">
+            <svg class="check-item" width="16" height="15">
               <use href="./images/icons.svg#icon-tick"></use>
             </svg>
             <p class="text-regul">

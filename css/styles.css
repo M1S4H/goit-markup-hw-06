@@ -486,11 +486,11 @@ main {
   pointer-events: none;
   visibility: hidden;
   transform: rotate(120deg);
+  scale: 0;
 }
 .modal {
   background-color: var(--text-color);
   position: absolute;
-  opacity: 1;
   box-shadow: 0px 1px 3px #0000001f, 0px 1px 1px #00000024,
     0px 2px 1px #00000033;
   border-radius: 4px;
@@ -537,7 +537,7 @@ nav ul li.current-site::after {
 }
 .backdrop {
   display: flex;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #00000033;
   position: fixed;
   left: 0;
   right: 0;
@@ -561,4 +561,159 @@ nav ul li.current-site::after {
   background-color: var(--niebo-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   padding: 10px 76px;
+  margin: auto;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  background-attachment: fixed;
+  padding: 0;
+}
+.btn-close {
+  position: absolute;
+  justify-content: center;
+  top: 6px;
+  right: 6px;
+}
+.group-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 12px;
+  color: var(--dark-color);
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 700;
+}
+.label-list {
+  display: flex;
+  padding: 5px 40px 5px 40px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--title-color);
+  flex-direction: column;
+}
+.label-part {
+  display: flex;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.label-list input {
+  padding-left: 42px;
+  font-size: 16px;
+  width: 448px;
+  height: 40px;
+  border: 1px solid #21212133;
+  border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.svg-form {
+  margin: 11px 12px;
+  justify-content: center;
+  position: absolute;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--dark-color);
+}
+.label-list :focus + .svg-form {
+  fill: #2196f3;
+}
+.label-list input :focus {
+  border: 1px solid var(--niebo-color);
+}
+.label-comment {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 40px 5px 40px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--title-color);
+}
+.label-comment textarea {
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  resize: none;
+  padding: 16px 12px 16px 12px;
+  margin-bottom: 20px;
+}
+.text-decor {
+  text-decoration: underline;
+  color: var(--niebo-color);
+}
+.policy {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  align-items: baseline;
+  color: var(--title-color);
+}
+
+.check-item {
+  margin-right: 8px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #212121;
+  fill: #fff;
+}
+
+.checkbox:checked + .check-item {
+  fill: white;
+  border: 1px solid black;
+  background: var(--niebo-color);
+}
+.text-regul {
+  font-size: 14px;
+}
+.footer-newsletter {
+  margin: 72px 0 0 78px;
+}
+.footer-inscription {
+  text-transform: uppercase;
+  line-height: 1.1428em;
+  font-size: 14px;
+  color: var(--text-color);
+}
+.input-send {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+.newsletter-input {
+  width: 358px;
+  height: 50px;
+  background-color: inherit;
+  border: 1px solid #ffffff4d;
+  border-radius: 4px;
+  padding-left: 16px;
+}
+.button-main-page {
+  background-color: var(--niebo-color);
+  color: var(--text-color);
+  font-weight: 700;
+  line-height: 1.875;
+  width: 200px;
+  padding: 10px 0;
+  margin: 0 auto;
+  letter-spacing: 0.06em;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.icon-newsletter {
+  fill: var(--text-color);
+  margin-left: 24px;
 }
